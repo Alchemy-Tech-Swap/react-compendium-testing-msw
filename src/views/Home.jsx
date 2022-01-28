@@ -18,10 +18,12 @@ export default function Home() {
       fetchData();
     }
   }, [query, loading]);
+
+  if (loading) return <h1>loading</h1>;
   return (
     <div>
       <h1>Pokedex</h1>
-      <Control setLoading={setLoading} setQuery={setQuery} />
+      <Control setLoading={setLoading} query={query} setQuery={setQuery} />
       <PokeCard pokemon={pokemon} setLoading={setLoading} />
     </div>
   );

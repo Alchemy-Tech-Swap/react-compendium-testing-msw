@@ -3,6 +3,7 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import Home from './Home';
 
+//colapse line 6!!!
 const user = {
   count: 801,
   page: 1,
