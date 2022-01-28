@@ -11,7 +11,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await getPokemon(query);
-      setPokemon([...data.results]);
+      setPokemon(data.results);
       setLoading(false);
     };
     if (loading) {
