@@ -14,7 +14,7 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterAll(() => server.listen());
 
-test('should be able to search for a pokemon', async () => {
+test.skip('should be able to search for a pokemon', async () => {
   render(<Home />);
 
   const searchBar = await screen.findByRole('textbox');
