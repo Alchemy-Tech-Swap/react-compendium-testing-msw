@@ -13,7 +13,7 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterAll(() => server.listen());
 
-test('Should render the Home page', async () => {
+test.skip('Should render the Home page', async () => {
   render(<Home />);
 
   const pokeList = await screen.findAllByRole('listitem');

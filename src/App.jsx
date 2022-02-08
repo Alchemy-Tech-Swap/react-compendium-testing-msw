@@ -9,24 +9,26 @@ function App() {
   const animation2 = useAnimation('elastic', 600, 150);
   const animation3 = useAnimation('elastic', 600, 300);
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <>
       <Home />
-      <Ball
-        innerStyle={{
-          marginTop: animation1 * 200 - 100,
-        }}
-      />
-      <Ball
-        innerStyle={{
-          marginTop: animation2 * 200 - 100,
-        }}
-      />
-      <Ball
-        innerStyle={{
-          marginTop: animation3 * 200 - 100,
-        }}
-      />
-    </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Ball
+          innerStyle={{
+            marginTop: animation1 * 200 - 100,
+          }}
+        />
+        <Ball
+          innerStyle={{
+            marginTop: animation2 * 200 - 100,
+          }}
+        />
+        <Ball
+          innerStyle={{
+            marginTop: animation3 * 200 - 100,
+          }}
+        />
+      </div>
+    </>
   );
 }
 const Ball = ({ innerStyle }) => (
@@ -35,8 +37,8 @@ const Ball = ({ innerStyle }) => (
       width: 200,
       height: 200,
       marginRight: '40px',
-      borderRadius: '50px',
-      backgroundImage: `url('Poke.png)`,
+      borderRadius: '100%',
+      backgroundImage: `url('pokeball2.png')`,
       backgroundPosition: 'center',
       ...innerStyle,
     }}
